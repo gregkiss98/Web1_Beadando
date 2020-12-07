@@ -4,25 +4,25 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
-import Home from "./Home";
-import Stuff from "./Stuff";
-import Contact from "./Contact";
+import Home from "./components/Home";
+import Deals from "./components/Deals";
+import Search from "./components/Search";
  
 class Main extends Component {
     render() {
       return (
         <HashRouter>
           <div>
-            <h1>GAIN File Converter</h1>
+            <h1>GAIN Steam Deals</h1>
             <ul className="header">
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/deals">Deals</NavLink></li>
+            <li><NavLink to="/search">Search</NavLink></li>
             </ul>
             <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/stuff" component={Stuff}/>
-            <Route path="/contact" component={Contact}/>
+            <Route path="/deals" component={Deals}/>
+            <Route path="/search" component={Search}/>
             </div>
           </div>
         </HashRouter>
