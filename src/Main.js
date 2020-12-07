@@ -1,15 +1,31 @@
-import React, { Component } from "react";
-import {
-  Route,
-  NavLink,
-  HashRouter
-} from "react-router-dom";
+import React, { Component, useEffect, useState } from "react";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import axios from 'axios';
 import Home from "./components/Home";
 import Deals from "./components/Deals";
 import Search from "./components/Search";
+
+
+/*
+function App() {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+   let mounted = true;
+   getList()
+     .then(items => {
+       if(mounted) {
+         setList(items)
+       }
+     })
+   return () => mounted = false;
+ }, [])}*/
+
+
  
+
 class Main extends Component {
-    render() {
+ render() {
       return (
         <HashRouter>
           <div>
@@ -30,4 +46,4 @@ class Main extends Component {
     }
   }
  
-export default Main;
+export default Main; 
