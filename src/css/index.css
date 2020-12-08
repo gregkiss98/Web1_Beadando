@@ -36,3 +36,7 @@ body {
   .content li {
     margin-bottom: 10px;
   }
+
+.deals > ul{
+  list-style: none;
+}
