@@ -1,16 +1,12 @@
 import React, { Component } from "react";
+import { getList } from '../services/list';
  
-class Contact extends Component {
+class Search extends Component {
   render() {
     return (
-      <div>
-        <h2>GOT QUESTIONS?</h2>
-        <p>The easiest thing to do is post on
-        our <a href="http://forum.kirupa.com">forums</a>.
-        </p>
-      </div>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Games.."></input>
     );
   }
 }
  
-export default Contact;
+export default Search;

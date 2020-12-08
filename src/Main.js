@@ -6,24 +6,6 @@ import Deals from "./components/Deals";
 import Search from "./components/Search";
 
 
-/*
-function App() {
-  const [list, setList] = useState([]);
-
-  useEffect(() => {
-   let mounted = true;
-   getList()
-     .then(items => {
-       if(mounted) {
-         setList(items)
-       }
-     })
-   return () => mounted = false;
- }, [])}*/
-
-
- 
-
 class Main extends Component {
  render() {
       return (
