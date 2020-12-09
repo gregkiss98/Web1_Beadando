@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import axios from 'axios';
 import { getList } from '../services/list';
 
-function App() {
+function Deals() {
   const [list, setList] = useState([]);
   useEffect(() => {
     let mounted = true;
@@ -27,4 +27,4 @@ function App() {
  )
 }
  
-export default App;
+export default Deals;
