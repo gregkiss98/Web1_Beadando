@@ -2,7 +2,6 @@ import React, { Component, useEffect, useState, useContext } from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Deals from "./components/Deals";
-import Search from "./components/Search";
 import ActiveStores from "./components/ActiveStores";
 import { ThemeContext } from './theme-context'
 
@@ -19,7 +18,6 @@ const Main = () => {
                 
                   <li><NavLink to="/home">Home</NavLink></li>
                   <li><NavLink to="/deals">Deals</NavLink></li>
-                  <li><NavLink to="/search">Search</NavLink></li>
                   <li><NavLink to="/ActiveStores">Active Stores</NavLink></li>
                   <button
                   type="button"
@@ -37,7 +35,6 @@ const Main = () => {
               <div className="content" >
                   <Route exact path="/home" component={Home}/>
                   <Route path="/deals" component={Deals}/>
-                  <Route exact path="/search" component={Search}/>
                   <Route path="/ActiveStores" component={ActiveStores}/>
               </div>
           </div>
