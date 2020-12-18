@@ -7,39 +7,44 @@ import { ThemeContext } from './theme-context'
 
 
 const Main = () => {
+  
   const { theme, toggle, dark } = React.useContext(ThemeContext)
 
   return (
-    <body style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
+    
+    <body style={{ backgroundColor: theme.backgroundColor,
+    color: theme.color, }}>
+      <button
+                    type="button"
+                        onClick={toggle}
+                          style={{
+                            backgroundColor: theme.backgroundColor,
+                              color: theme.color,
+                              outline: 'none',
+                              
+                          }}
+                  >
+                    Váltás {!dark ? 'sötét' : 'világos'} módra
+                  </button>
+      
+      <h1>GAIN Deals</h1>
       <HashRouter>
-          <div >
-              <h1>GAIN Steam Deals</h1>
-              <ul className="header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
+      <ul className="header" >
                 
-                  <li><NavLink to="/home">Home</NavLink></li>
-                  <li><NavLink to="/deals">Deals</NavLink></li>
-                  <li><NavLink to="/ActiveStores">Active Stores</NavLink></li>
-                  <button
-                  type="button"
-                      onClick={toggle}
-                        style={{
-                          backgroundColor: theme.backgroundColor,
-                            color: theme.color,
-                            outline: 'none',
-                            
-                        }}
-                >
-                  Váltás {!dark ? 'Sötét' : 'Világos'} módra
-                </button>
-              </ul>
-              <div className="content" >
-                  <Route exact path="/home" component={Home}/>
-                  <Route path="/deals" component={Deals}/>
-                  <Route path="/ActiveStores" component={ActiveStores}/>
-              </div>
-          </div>
+                <li><NavLink to="/home">Home</NavLink></li>
+                <li><NavLink to="/deals">Deals</NavLink></li>
+                <li><NavLink to="/ActiveStores">Active Stores</NavLink></li>
+                
+            </ul>
+            <div className="content" >
+                
+                <Route exact path="/home" component={Home}/>
+                <Route path="/deals" component={Deals}/>
+                <Route path="/ActiveStores" component={ActiveStores}/>
+
+            </div>
       </HashRouter>
-    </body>  
+      </body>
   );
-}
+};
 export default Main;

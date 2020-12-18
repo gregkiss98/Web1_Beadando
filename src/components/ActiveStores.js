@@ -18,7 +18,7 @@ const initialState = {
             return {
                 loading: false,
                 post: {},
-                error: 'Valami nem stimmel!'
+                error: 'Hiba az API betöltése közben!'
                 
             }
         default:
@@ -27,12 +27,12 @@ const initialState = {
  }
 
 
-function DateReducer() {
+function ActiveStores() {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     useEffect(() => {
         axios
-            .get('https://www.cheapshark.com/api/1.0/stores')
+            .get('https://api.exchangeratesapi.io/latest')
             .then(response => {
                 dispatch({type: 'FETCH_SUCCESS', payload: response.data})
             })
@@ -44,10 +44,11 @@ function DateReducer() {
 
     return (
         <div>
-            {state.loading ? 'Loading' : state.post.storeName}
+            <h1>Aktív áruházak</h1>
+            {state.loading ? 'Pillanat...' : state.post.storeName}
             {state.error ? state.error: null}
         </div>
     )
 }
 
-export default DateReducer;
+export default ActiveStores;

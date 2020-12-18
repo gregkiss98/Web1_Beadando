@@ -7,7 +7,7 @@ class Home extends Component {
       <div>
         <h1>Üdvözöllek!</h1>
         <p>Ez a weboldal a Web-es rendszerek programozása 1 nevű órára készült Kiss Gergő által, beadandó gyanánt. Kizárólag
-            gyakorlati és tapasztalat szerzési célokat szolgál, valamint fejlesztés alatt áll. Megértésed köszönöm!</p>
+            gyakorlati és tapasztalat szerzési célokat szolgál, valamint fejlesztés alatt áll.</p>
       </div>
     );
   }
