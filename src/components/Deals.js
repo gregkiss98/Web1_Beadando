@@ -1,7 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component, useEffect, useState, useContext } from "react";
 import { getList } from '../services/list';
+import { ThemeContext } from '../theme-context'
 
 function Deals() {
+  const { theme, toggle, dark } = React.useContext(ThemeContext)
   const [list, setList] = useState([]);
   useEffect(() => {
     let mounted = true;
@@ -16,10 +18,13 @@ function Deals() {
 
   return(
    <div class="deals">
-    <h1>Steam Deals</h1>
-    <h2>Hottest games right now</h2>
+    <h1 style={{ backgroundColor: theme.backgroundColor,
+    color: theme.color }}>Steam Deals</h1>
+    <h2 style={{ backgroundColor: theme.backgroundColor,
+    color: theme.color }}>Hottest games right now</h2>
     <ul>
-      {list.map(title => <li key={title.storeid}><img src={title.thumb}></img> Game name: {title.title} | Sale Price: {title.salePrice} | Normal Price: {title.normalPrice}</li>)}
+      {list.map(title => <li style={{ backgroundColor: theme.backgroundColor,
+    color: theme.color }}  key={title.storeid}><img src={title.thumb}></img> Game name: {title.title} | Sale Price: {title.salePrice} | Normal Price: {title.normalPrice}</li>)}
     </ul>
 
   </div>

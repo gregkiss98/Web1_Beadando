@@ -13,7 +13,7 @@ const Main = () => {
   return (
     
     <body style={{ backgroundColor: theme.backgroundColor,
-    color: theme.color, }}>
+    color: theme.color }}>
       <button
                     type="button"
                         onClick={toggle}
@@ -27,16 +27,17 @@ const Main = () => {
                     Váltás {!dark ? 'sötét' : 'világos'} módra
                   </button>
       
-      <h1>GAIN Deals</h1>
+      <h1 style={{ backgroundColor: theme.backgroundColor,
+    color: theme.color }}>GAIN Deals</h1>
       <HashRouter>
       <ul className="header" >
                 
-                <li><NavLink to="/home">Home</NavLink></li>
+                <li ><NavLink to="/home">Home</NavLink></li>
                 <li><NavLink to="/deals">Deals</NavLink></li>
                 <li><NavLink to="/ActiveStores">Active Stores</NavLink></li>
                 
             </ul>
-            <div className="content" >
+            <div className="content">
                 
                 <Route exact path="/home" component={Home}/>
                 <Route path="/deals" component={Deals}/>
