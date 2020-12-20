@@ -18,10 +18,8 @@ function Deals() {
 
   return(
    <div class="deals">
-    <h1 style={{ backgroundColor: theme.backgroundColor,
-    color: theme.color }}>Steam Deals</h1>
     <h2 style={{ backgroundColor: theme.backgroundColor,
-    color: theme.color }}>Hottest games right now</h2>
+    color: theme.color }}>Éppen leárazott játékok Steamen</h2>
     <ul>
       {list.map(title => <li style={{ backgroundColor: theme.backgroundColor,
     color: theme.color }}  key={title.storeid}><img src={title.thumb}></img> Game name: {title.title} | Sale Price: {title.salePrice} | Normal Price: {title.normalPrice}</li>)}
