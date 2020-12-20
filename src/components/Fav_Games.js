@@ -1,8 +1,8 @@
-import React, {useReducer, useEffect} from 'react'
-import axios from 'axios'
+import React, {useReducer} from 'react'
 import { ThemeContext } from '../theme-context'
 
 const initialState = 0;
+
 const reducer = (state, action) => {
 
   switch (action) {
@@ -21,6 +21,7 @@ const Fav_Games = () => {
       color: theme.color }}>
       {count} darab kedvenc játékod van
       <br></br>
+      
       <button onClick={() => dispatch('increment')}>1 játék hozzáadása</button>
       <button onClick={() => dispatch('decrement')}>1 játék elvétele</button>
       <button onClick={() => dispatch('reset')}>Nincs kedvenc játékom :(</button>

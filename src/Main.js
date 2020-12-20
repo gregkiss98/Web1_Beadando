@@ -1,10 +1,9 @@
-import React, { Component, useEffect, useState, useContext } from "react";
+import React from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Deals from "./components/Deals";
 import Fav_Games from "./components/Fav_Games";
 import { ThemeContext } from './theme-context'
-import { alignPropType } from "react-bootstrap/esm/DropdownMenu";
 
 
 const Main = () => {

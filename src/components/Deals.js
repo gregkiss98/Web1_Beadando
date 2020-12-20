@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { getList } from '../services/list';
 import { ThemeContext } from '../theme-context'
 
