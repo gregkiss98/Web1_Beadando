@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import Home from "Home";
-import Deals from "Deals";
-import Fav_Games from "Fav_Games";
-import { ThemeContext } from 'theme-context'
+import Home from "./Home";
+import Deals from "./Deals";
+import Fav_Games from "./Fav_Games";
+import { ThemeContext } from './theme-context'
 
 
 const Main = () => {

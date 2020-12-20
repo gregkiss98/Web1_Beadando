@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getList } from './services/list';
-import { ThemeContext } from 'theme-context'
+import { ThemeContext } from './theme-context'
 
 function Deals() {
   const { theme, toggle, dark } = React.useContext(ThemeContext)
