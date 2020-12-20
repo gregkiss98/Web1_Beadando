@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Web1 beadandó leírása
+Ez a weboldal a Web-es rendszerek programozása 1 nevű órára készült Kiss Gergő által, beadandó gyanánt. Kizárólag gyakorlati és tapasztalat szerzési célokat szolgál, valamint fejlesztés alatt áll.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dark / White mód
+Az oldal alapból white módban töltődik be, és a bal felső sarokban van a felhasználónak lehetősége állítani a hogy melyik módban jelenjen meg egy gomb segítségével. Ez egy globális állapot, mindegyik oldal használja, valamint az oldal újra be töltésekor is a korábban beállított színben jelenik meg. 
 
-## Available Scripts
+## Home
+A Home oldalon egy rövid áttekintést találunk hogy miért készült az oldal, ki által, valamint egy figyelmeztetést annak az egyszerűségére.
 
-In the project directory, you can run:
+## Deals
+A Deals oldalon Az éppen aktuálisan leárazott játékokat találjuk meg. Ezt egy API-ból hívtam meg (https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15). Ezt egy listába olvasom be, a list.js-be, ami továbbítja a a Deals.js-be, és ott dolgozom fel egy map segítségével. Ezen belül jelenítem meg a játék thumbnail képét, a nevét, a leárazás alatti árát, valamint a normál árát összehasonlítás képpen.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Favourite Games Counter
+Egy számlálót találunk az oldalon, useReducer segítségével készült. A lényege az a hogy számon tarthatjuk vele hány darab kedvenc játékunk van. Ezt tudjuk egyesével növelni, egyesével csökkenteni, vagy resetelni 0-ra ha. 
