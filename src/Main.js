@@ -11,7 +11,7 @@ const Main = () => {
   const { theme, toggle, dark } = React.useContext(ThemeContext)
 
   return (
-    
+
     <body style={{ backgroundColor: theme.backgroundColor,
     color: theme.color }}>
       <button
